@@ -3,15 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pokedex</title>
   </head>
 
   <body>
     <div id="nameThis"></div>
+    <input list="searchtest" name="pokeMon" id="pokeName" />
+    <datalist id="searchtest"> </datalist>
+    <input type="button" value="Search" />
   </body>
-  <script>
+  <script defer>
     console.clear();
 
+    let searchText = document.getElementById("pokeName");
+    let searchList = [];
+
+    searchText.addEventListener("keyup", (keys) => {
+      searchList = [];
+      for (let dexSearch of pokeDex) {
+        if (dexSearch.includes(searchText.value)) {
+          searchList.push(dexSearch);
+        }
+      }
+      searchText.list = searchList;
+      console.log(searchList);
+      console.log(searchText);
+    });
+    searchText.addEventListener("focus", (focused) => {
+      focused.target.style.background = "Red";
+      document.getElementById("searchtest");
+    });
+    searchText.addEventListener("blur", (blured) => {
+      blured.target.style.background = "";
+      searchList = null;
+    });
+
+    console.log(searchText);
     // Cannot be a reserved keyword
     // Should be meaningful
     // Cannot start with a number (1name)
@@ -31,6 +58,29 @@
     let nameThis = document.getElementById("nameThis");
     nameThis.innerHTML = ` ${firstName} ${lastName}`;
     nameThis.align = "center";
-    console.log(typeof nameThis);
+    getPokemonData();
+    let pokeDex = [];
+
+    async function getPokemonData() {
+      try {
+        const response = await fetch(
+          "https://pokeapi.co/api/v2/pokemon?limit=10000"
+        );
+
+        if (!response.ok) {
+          throw new Error("Could not fetch data");
+        }
+        const pokemonResponse = await response.json();
+
+        for (let pokeMon of pokemonResponse.results) {
+          pokeDex.push(pokeMon.name);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    console.log("List of Pokemon");
+    console.log(pokeDex);
+    searchText.list = pokeDex;
   </script>
 </html>
