@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="nameThis"></div>
+  </body>
+  <script>
+    console.clear();
+
+    // Cannot be a reserved keyword
+    // Should be meaningful
+    // Cannot start with a number (1name)
+    // Cannot contain a space or hyphen (-)
+    // Variables are case-sensitive
+    // Camel Notation (firstName ! FirstName)
+
+    // When Declaring a value
+    // Let - variables value is changeable
+    // Const - variable value cannot be changed
+
+    let firstName = "Clark Laurent";
+    let lastName = "Dumon";
+    console.log(firstName + " " + lastName);
+    console.log(document.getElementById("nameThis"));
+
+    let nameThis = document.getElementById("nameThis");
+    nameThis.innerHTML = ` ${firstName} ${lastName}`;
+    nameThis.align = "center";
+    console.log(typeof nameThis);
+  </script>
+</html>
