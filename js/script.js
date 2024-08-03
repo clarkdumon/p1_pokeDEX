@@ -8,21 +8,24 @@ const myfunction = async function () {
       return respose.json();
     })
     .then((pokeData) => {
-      console.log(pokeData);
-      return pokeData.count;
+      return pokeData.results;
+    })
+    .then((results) => {
+      let url = results.map((result) => result.url);
+      console.log(url);
     });
 
-  for (let i = 1; i < (await pokeMax); i++) {
-    pokeDEX.push(
-      fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((pokeData) => {
-          return pokeData;
-        })
-    );
-  }
+  //   for (let i = 1; i < (await pokeMax); i++) {
+  //     pokeDEX.push(
+  //       fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+  //         .then((response) => {
+  //           return response.json();
+  //         })
+  //         .then((pokeData) => {
+  //           return pokeData;
+  //         })
+  //     );
+  //   }
 };
 
 // Start function
