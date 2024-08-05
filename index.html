@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokeDex</title>
   </head>
-  <script defer src="js/script.js"></script>
   <body>
     <div class="container">
       <div class="header">
@@ -14,13 +13,15 @@
       <div class="search-bar">
         <input type="text" name="search-box" id="seach-box" />
         <input type="button" value="Search" />
+        <ol id="pokemonList">
+        </ol>
       </div>
       <div id="poke-card">
         <div id="poke-card-header">
           <img
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
-            alt=""
-            id="pokeSVG" />
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
+          alt=""
+          id="pokeSVG" />
           <h2>#1</h2>
           <h2>Bulbasaur</h2>
         </div>
@@ -33,4 +34,6 @@
       </div>
     </div>
   </body>
-</html>
+  <script defer src="js/script.js"></script>
+  </html>
+  
