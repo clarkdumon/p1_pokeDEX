@@ -1,7 +1,7 @@
 console.clear;
 console.info("start script");
 
-const pokemonList = document.getElementById("pokemonList");
+// const pokemonList = document.getElementById("pokemonList");
 // Function to fetch data
 async function fetchData(url) {
   try {
