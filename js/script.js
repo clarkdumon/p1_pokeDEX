@@ -1,47 +1,38 @@
 console.clear;
+console.info("start script");
 
-// const pokeList = document.getElementById("pokemonList");
-// const pokeSearch = document.getElementById("seach-box");
-// console.log(pokeSearch);
+// Function to fetch data
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Network response was not ok " + response.statusText);
+    }
+    const data = await response.json();
+    return data.results;
+  } catch (error) {
+    console.error("There has been a problem with your fetch operation:", error);
+  }
+}
 
-// pokeSearch.addEventListener("keyup", (event) => {
-//   const searchValue = event.target.value;
-//   fetch(`https://pokeapi.co/api/v2/pokemon?limit=1500`)
-//     .then((response) => response.json())
-//     .then((result) => {
-//       listPokemon(result.results.map(pokemon));
-//     });
+// Function to use the fetched data
+function useData(data) {
+  // Do something with the data
+  console.log(data);
+}
 
-//   const listPokemon = (pokemonList) => {
-//     console.log(pokemonList);
+// Main function to orchestrate fetching and using data
+async function main() {
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=5"; // Replace with your API endpoint
+  const data = await fetchData(url);
 
-//     const listHtml = pokemonList
-//       .map(
-//         (pokemon) =>
-//           `<li>${
-//             pokemon.name.charAt(0).toUpperCase() +
-//             pokemon.name.substring(1).toLowerCase()
-//           }</li>`
-//       )
-//       .join("");
-//     pokeList.innerHTML = listHtml;
-//   };
-// });
-const fetchPokeAPI = new Promise((resolve, reject) => {
-  return fetch(`https://pokeapi.co/api/v2/pokemon?limit=5`)
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-    })
-    .then((data) => {
-      console.log(data.results);
-      return data.results;
-    });
-});
-
-fetchPokeAPI.then((data) => {
-  data.map((pokemon) => {
-    console.log(pokemon.url);
+  let pokemons = data.map((res) => {
+    res.url;
   });
-});
+  if (data) {
+    useData(pokemons);
+  }
+}
+
+// Execute the main function
+main();
