@@ -1,6 +1,7 @@
 console.clear;
 console.info("start script");
 
+const pokemonList = document.getElementById("pokemonList");
 // Function to fetch data
 async function fetchData(url) {
   try {
@@ -23,11 +24,11 @@ function useData(data) {
 
 // Main function to orchestrate fetching and using data
 async function main() {
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=5"; // Replace with your API endpoint
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=1500"; // Replace with your API endpoint
   const data = await fetchData(url);
 
   let pokemons = data.map((res) => {
-    res.url;
+    return res.name;
   });
   if (data) {
     useData(pokemons);
