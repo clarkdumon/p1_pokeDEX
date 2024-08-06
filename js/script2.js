@@ -1,38 +1,38 @@
 console.clear;
 console.log("--");
 
-
-
 const fetchPokeAPI = async function () {
+  const pokemonList = [];
 
-  const pokemonList = []
-
-  const pokeMonAPi = 
-  fetch(`https://pokeapi.co/api/v2/pokemon?limit=10`)
-    .then((response)=>response.json())
-    .then((pokemonURL)=>{
-      pokemonURL.results.map((pokeMons)=>{
-          fetch(pokeMons.url)
-            .then(response => response.json())
-            .then(pokeData =>{
-              const pokeMon ={
-                index: pokeData.id,
-                name: pokeData.name,
-                image: pokeData.sprites.other.home.front_default,
-                height: pokeData.height,
-                weight: pokeData.weight,
-                type: pokeData.types.map((type) => {return type.type.name;}),
-                stats: pokeData.stats.map((stat) => {return [stat.stat.name, stat.base_stat];}),
-              };
-              pokemonList.push(pokeMon)
-            })
-    })
-  });
+  const pokeMonAPi = fetch(`https://pokeapi.co/api/v2/pokemon?limit=10`)
+    .then((response) => response.json())
+    .then((pokemonURL) => {
+      pokemonURL.results.map((pokeMons) => {
+        fetch(pokeMons.url)
+          .then((response) => response.json())
+          .then((pokeData) => {
+            const pokeMon = {
+              index: pokeData.id,
+              name: pokeData.name,
+              image: pokeData.sprites.other.home.front_default,
+              height: pokeData.height,
+              weight: pokeData.weight,
+              type: pokeData.types.map((type) => {
+                return type.type.name;
+              }),
+              stats: pokeData.stats.map((stat) => {
+                return [stat.stat.name, stat.base_stat];
+              }),
+            };
+            pokemonList.push(pokeMon);
+          });
+      });
+    });
   displayPokemon(pokemonList.name);
-}
-const displayPokemon = (pokemon) =>{
-  console.log(pokemon)
-}
+};
+const displayPokemon = (pokemon) => {
+  console.log(pokemon);
+};
 
 // My function
 // const myfunction = async function () {
@@ -43,7 +43,7 @@ const displayPokemon = (pokemon) =>{
 //     })
 //     .then((pokeData) => {
 //       //   console.log(pokeData);
-
+//asdasdasdasdas
 //       const pokeMon = {
 //         index: pokeData.id,
 //         name: pokeData.name,
