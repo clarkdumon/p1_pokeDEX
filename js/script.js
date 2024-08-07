@@ -27,6 +27,7 @@ function useData(data) {
 // PokeSearch Event Listener
 pokeSearch.addEventListener("keyup", async (keys) => {
   const searchValue = keys.target.value;
+
   //   console.log(searchValue);
   const url = "https://pokeapi.co/api/v2/pokemon?limit=1500";
   const data = await fetchData(url);
@@ -42,7 +43,11 @@ pokeSearch.addEventListener("keyup", async (keys) => {
   }
   //   console.log(searchList);
 
-  displayPokemon(searchList);
+  if (searchValue == "") {
+    pokemonList.innerHTML = "";
+  } else {
+    displayPokemon(searchList);
+  }
 });
 
 const displayPokemon = async (searchList) => {
