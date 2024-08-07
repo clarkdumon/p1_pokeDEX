@@ -1,6 +1,8 @@
 console.clear;
 console.info("start script");
 
+const pokemonList = document.getElementById("pokemonList");
+const pokeSearch = document.getElementById("seach-box");
 // const pokemonList = document.getElementById("pokemonList");
 // Function to fetch data
 async function fetchData(url) {
@@ -22,27 +24,54 @@ function useData(data) {
   console.log(data);
 }
 
-// Main function to orchestrate fetching and using data
-async function main() {
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=1500"; // Replace with your API endpoint
+// PokeSearch Event Listener
+pokeSearch.addEventListener("keyup", async (keys) => {
+  const searchValue = keys.target.value;
+  //   console.log(searchValue);
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=1500";
   const data = await fetchData(url);
-
   let pokemons = data.results.map((res) => {
     return res.name;
   });
-  if (data) {
-    useData(pokemons);
+
+  const searchList = [];
+  for (let pokeList of pokemons) {
+    if (pokeList.startsWith(searchValue)) {
+      searchList.push(pokeList);
+    }
   }
+  //   console.log(searchList);
+
+  displayPokemon(searchList);
+});
+
+const displayPokemon = async (searchList) => {
+  const searchHTML = [];
+  for (let i = 0; i < searchList.length; i++) {
+    searchHTML.push(
+      `<li name="${searchList[i]}" onclick="pushTopokeSearch('${searchList[i]}')" >${searchList[i]}</li>`
+    );
+  }
+  let pokeListHTML = searchHTML.join("");
+  if (pokeListHTML.length == 0) {
+    pokemonList.innerHTML = `<li>No pokemon found</li>`;
+  } else {
+    pokemonList.innerHTML = pokeListHTML;
+  }
+};
+
+function pushTopokeSearch(pokemon) {
+  pokeSearch.value = pokemon;
+  pokemonList.innerHTML = "";
 }
 
-// Execute the main function
-main();
+// getPokemonList();
 const pokemon = "bulbasaur";
 
 async function getPokemon(pokemon) {
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
   const pokemonData = await fetchData(url);
 
-  useData(pokemonData.name);
+  useData(pokemonData.name + ` from getPokemon`);
 }
 getPokemon(pokemon);
