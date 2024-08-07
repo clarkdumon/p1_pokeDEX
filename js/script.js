@@ -1,5 +1,4 @@
 console.clear;
-console.info("start script");
 
 const pokemonList = document.getElementById("pokemonList");
 const pokeSearch = document.getElementById("seach-box");
@@ -77,6 +76,6 @@ async function getPokemon(pokemon) {
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
   const pokemonData = await fetchData(url);
 
-  useData(pokemonData.name + ` from getPokemon`);
+  //   useData(pokemonData.name + ` from getPokemon`);
 }
 getPokemon(pokemon);
