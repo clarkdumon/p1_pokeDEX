@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(48, 48, 48);
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 50px;
+  align-self: center;
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  border-radius: 8px;
+}
+.header {
+  background-color: orange;
+}
+.search-bar {
+  background-color: orange;
+}
+
+.search-bar ol {
+  height: 50px;
+}
+.search-bar ol li:has {
+}
