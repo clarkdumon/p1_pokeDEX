@@ -1,7 +1,8 @@
 console.clear;
 
 const pokemonList = document.getElementById("pokemonList");
-const pokeSearch = document.getElementById("seach-box");
+const txtPokeSearch = document.getElementById("seach-box");
+const btnPokeSearch = document.getElementById("btn-search");
 // const pokemonList = document.getElementById("pokemonList");
 // Function to fetch data
 async function fetchData(url) {
@@ -24,7 +25,7 @@ function useData(data) {
 }
 
 // PokeSearch Event Listener
-pokeSearch.addEventListener("keyup", async (keys) => {
+txtPokeSearch.addEventListener("keyup", async (keys) => {
   const searchValue = keys.target.value;
 
   //   console.log(searchValue);
@@ -65,7 +66,7 @@ const displayPokemon = async (searchList) => {
 };
 
 function pushTopokeSearch(pokemon) {
-  pokeSearch.value = pokemon;
+  txtPokeSearch.value = pokemon;
   pokemonList.innerHTML = "";
 }
 
@@ -79,3 +80,8 @@ async function getPokemon(pokemon) {
   //   useData(pokemonData.name + ` from getPokemon`);
 }
 getPokemon(pokemon);
+
+btnPokeSearch.addEventListener("click", searchPoke);
+function searchPoke() {
+  console.log(txtPokeSearch.value);
+}
