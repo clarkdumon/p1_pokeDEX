@@ -7,14 +7,17 @@ body {
   align-items: center;
   width: 100vh;
   height: 100vh;
+  margin: auto;
 }
 
 .container {
-  margin-top: 50px;
-  align-self: center;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+
+  outline: 5px solid red;
   background-color: white;
-  width: 500px;
-  height: 600px;
   border-radius: 8px;
 }
 .header {
