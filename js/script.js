@@ -27,8 +27,6 @@ function useData(data) {
 // PokeSearch Event Listener
 txtPokeSearch.addEventListener("keyup", async (keys) => {
   const searchValue = keys.target.value;
-
-  //   console.log(searchValue);
   const url = "https://pokeapi.co/api/v2/pokemon?limit=1500";
   const data = await fetchData(url);
   let pokemons = data.results.map((res) => {
@@ -53,9 +51,7 @@ txtPokeSearch.addEventListener("keyup", async (keys) => {
 const displayPokemon = async (searchList) => {
   const searchHTML = [];
   for (let i = 0; i < searchList.length; i++) {
-    searchHTML.push(
-      `<li name="${searchList[i]}" onclick="pushTopokeSearch('${searchList[i]}')" >${searchList[i]}</li>`
-    );
+    searchHTML.push(`<li name="${searchList[i]}" onclick="pushTopokeSearch('${searchList[i]}')" >${searchList[i]}</li>`);
   }
   let pokeListHTML = searchHTML.join("");
   if (pokeListHTML.length == 0) {
