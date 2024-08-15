@@ -12,9 +12,9 @@ async function fetchData(url, funcName) {
 	}
 }
 
-fetchPokemon("avalugg-hisui");
+test();
 //fetchPokemon("avalugg-hisui");
-fetchPokemonList("puf");
+
 // Pull pokemon data as selected
 async function fetchPokemon(pokemon) {
 	const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`; // URL String used to fetch data from API
@@ -35,11 +35,12 @@ async function fetchPokemon(pokemon) {
 			const status = {
 				[stat.stat.name]: stat.base_stat,
 			};
+
 			return status;
 		}),
 	};
 	// console.log(pokemonData);
-
+	console.log(pokemonData.sprite);
 	return pokemonData;
 }
 
@@ -56,5 +57,12 @@ async function fetchPokemonList(keys) {
 			return name;
 		}
 	});
-	console.log(pokemonList);
+	return pokemonList;
+}
+
+async function test(params) {
+	let test = await fetchPokemonList("saur");
+	let test2 = await fetchPokemon("avalugg-hisui");
+	console.log(test);
+	console.log(test2);
 }
