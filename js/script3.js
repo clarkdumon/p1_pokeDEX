@@ -1,4 +1,5 @@
 async function fetchData(url, funcName) {
+	//
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -13,7 +14,7 @@ async function fetchData(url, funcName) {
 
 fetchPokemon("avalugg-hisui");
 //fetchPokemon("avalugg-hisui");
-
+fetchPokemonList("puf");
 // Pull pokemon data as selected
 async function fetchPokemon(pokemon) {
 	const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`; // URL String used to fetch data from API
@@ -37,7 +38,23 @@ async function fetchPokemon(pokemon) {
 			return status;
 		}),
 	};
-  console.log(pokemonData);
-  
+	// console.log(pokemonData);
+
 	return pokemonData;
+}
+
+async function fetchPokemonList(keys) {
+	const url = "https://pokeapi.co/api/v2/pokemon?limit=1500";
+	let searchValue = keys; // let searchValue = keys.target.value;
+	let data = await fetchData(url);
+	let pokemons = data.results.map((res) => {
+		return res.name;
+	});
+
+	let pokemonList = pokemons.filter((name) => {
+		if (name.includes(keys)) {
+			return name;
+		}
+	});
+	console.log(pokemonList);
 }
