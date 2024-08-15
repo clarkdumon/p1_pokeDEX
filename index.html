@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokeDex</title>
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>PokeDEX</h1>
-      </div>
-      <div class="search-bar">
-        <input type="text" name="search-box" id="seach-box" />
-        <input type="button" value="Search" id="btn-search" />
-        <ol id="pokemonList"></ol>
-      </div>
-      <div id="poke-card">
-        <div id="poke-card-header">
-          <img
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
-            alt=""
-            id="pokeSVG" />
-          <h2>#1</h2>
-          <h2>Bulbasaur</h2>
-        </div>
-        <div id="poke-card-info">
-          <div id="poke-card-type">
-            <h3>Grass</h3>
-            <h3>Poison</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script defer src="js/script.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PokeDex</title>
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>PokeDEX</h1>
+			</div>
+			<div class="search-bar">
+				<input type="text" name="search-box" id="search-box" />
+				<input type="button" value="Search" id="btn-search" />
+				<ol id="pokemonList"></ol>
+			</div>
+			<div id="poke-card">
+				<div id="poke-card-header">
+					<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg" alt="" id="pokeSVG" />
+					<h2>#1</h2>
+					<h2>Bulbasaur</h2>
+				</div>
+				<div id="poke-card-info">
+					<div id="poke-card-type">
+						<h3>Grass</h3>
+						<h3>Poison</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script defer src="js/script.js"></script>
 </html>
