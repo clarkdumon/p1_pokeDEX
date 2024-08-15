@@ -61,8 +61,8 @@ async function fetchPokemonList(keys) {
 }
 
 async function test(params) {
-	let test = await fetchPokemonList("saur");
-	let test2 = await fetchPokemon("avalugg-hisui");
+	let test = await fetchPokemonList("blas");
+	let test2 = await fetchPokemon("blastoise");
 	console.log(test);
 	console.log(test2);
 }
