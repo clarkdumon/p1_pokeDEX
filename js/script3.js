@@ -12,7 +12,7 @@ async function fetchData(url, funcName) {
 	}
 }
 
-test();
+seachbarFunc("blas");
 //fetchPokemon("avalugg-hisui");
 
 // Pull pokemon data as selected
@@ -65,4 +65,15 @@ async function test(params) {
 	let test2 = await fetchPokemon("blastoise");
 	console.log(test);
 	console.log(test2);
+}
+async function seachbarFunc(params) {
+	let pokeSearch = await fetchPokemonList(params);
+
+	console.log(pokeSearch);
+
+	let searchHTML = pokeSearch.map((poke) => {
+		return `<li class="pokemon" onclick="pushPokesearch('${poke}')">${poke}</li>`;
+	});
+
+	console.log(searchHTML);
 }
