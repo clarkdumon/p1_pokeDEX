@@ -3,33 +3,96 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PokeDex</title>
-		<link rel="stylesheet" href="style/style.css" />
+		<title>Document</title>
 	</head>
+	<link rel="stylesheet" href="/style/style.css" />
 	<body>
 		<div class="container">
-			<div class="header">
-				<h1>PokeDEX</h1>
+			<div class="col1 searchColumn">
+				<input
+					type="text"
+					name="searchBox"
+					id="searchBox"
+					placeholder="Search Pokemon" />
+				<ul id="pokemonList">
+					<li><span>
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" height="100px" width="100px">
+							<p>Bulbasaur</p>
+						</img>
+					</span></li>
+					<li><span>
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" height="100px" width="100px">
+							<p>Bulbasaur</p>
+						</img>
+					</span></li>
+					<li><span>
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" height="100px" width="100px">
+							<p>Bulbasaur</p>
+						</img>
+					</span></li>
+					<li><span>
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" height="100px" width="100px">
+							<p>Bulbasaur</p>
+						</img>
+					</span></li>
+					<li><span>
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" height="100px" width="100px">
+							<p>Bulbasaur</p>
+						</img>
+					</span></li>
+					<li><span>
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" height="100px" width="100px">
+							<p>Bulbasaur</p>
+						</img>
+					</span></li>
+				</l>
 			</div>
-			<div class="search-bar">
-				<input type="text" name="search-box" id="search-box" />
-				<input type="button" value="Search" id="btn-search" />
-				<ol id="pokemonList"></ol>
-			</div>
-			<div id="poke-card">
-				<div id="poke-card-header">
-					<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg" alt="" id="pokeSVG" />
-					<h2>#1</h2>
-					<h2>Bulbasaur</h2>
-				</div>
-				<div id="poke-card-info">
-					<div id="poke-card-type">
-						<h3>Grass</h3>
-						<h3>Poison</h3>
+			<div class="col2 pokemonColumn">
+				<div class="pokemonDetails">
+					<div class="pokemonNameID">
+						<h1>#0001</h1>
+						<h2>Bulbasaur</h2>
 					</div>
+					<div class="pokemonImgType">
+						<img
+							src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+							alt="" />
+						<span class="pokemonType">
+							<ul>
+								<li>grass</li>
+								<li>poison</li>
+							</ul>
+						</span>
+					</div>
+				</div>
+				<div class="pokemonStats">
+					<ul>
+						<li>
+							<span class="statName">hp</span><span class="statValue">80</span>
+						</li>
+						<li>
+							<span class="statName">attack</span
+							><span class="statValue">82</span>
+						</li>
+						<li>
+							<span class="statName">defense</span
+							><span class="statValue">83</span>
+						</li>
+						<li>
+							<span class="statName">speed</span
+							><span class="statValue">80</span>
+						</li>
+						<li>
+							<span class="statName">special-attack</span
+							><span class="statValue">100</span>
+						</li>
+						<li>
+							<span class="statName">special-defense</span
+							><span class="statValue">100</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</body>
-	<script defer src="js/script.js"></script>
 </html>
