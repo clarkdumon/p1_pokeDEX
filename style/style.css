@@ -15,14 +15,16 @@ body {
 	margin: auto;
 	border: 0.5rem solid red;
 	max-width: 75vw;
-	width: 45vw;
+	width: 50vw;
 	height: 50vh;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
 
 .col1 {
 	border: 0.5rem solid green;
+	max-width: 25vw;
 	flex-grow: 1;
 }
 
@@ -49,6 +51,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-self: center;
+	list-style: none;
 }
 #pokemonList li:hover {
 	border: solid black;
@@ -56,4 +59,34 @@ body {
 .col2 {
 	border: 0.5rem solid orange;
 	flex-grow: 1;
+	max-width: 25vw;
+	width: 25vw;
+}
+
+.pokemonDetails {
+	outline: solid black;
+	background: white;
+	width: 100%;
+	height: 35vh;
+	position: initial;
+}
+
+.pokemonNameID {
+	/* outline: green solid; */
+	position: initial;
+	padding-top: 1.5rem;
+	padding-left: 1.5rem;
+}
+.pokemonImgType {
+	position: inherit;
+	display: flex;
+	justify-content: center;
+}
+
+.pokemonType {
+	outline: red solid;
+	position: fixed;
+	top: 50px;
+
+	/* display: none; */
 }
