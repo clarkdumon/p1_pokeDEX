@@ -21,7 +21,9 @@ body {
 	outline: solid blue; */
 	overflow: hidden;
 }
-
+.col1 span {
+	position: relative;
+}
 .col1 #searchBox {
 	width: 400px;
 	height: 40px;
@@ -43,7 +45,7 @@ body {
 	/* outline: solid red; */
 	height: 500px;
 	width: 50%;
-	display: none;
+	/* display: none; */
 }
 
 .pokemonDetails {
@@ -73,4 +75,29 @@ body {
 	position: absolute;
 	bottom: 30px;
 	right: 30px;
+}
+
+ul li {
+	list-style: none;
+	border-bottom: 1px solid black;
+}
+ul .pokemon {
+	padding: 5px;
+	width: 50px;
+	/* background: red; */
+	margin: 5px;
+	text-align: center;
+}
+#clearBtn {
+	/* outline: solid red; */
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: none;
+	position: absolute;
+	top: -15px;
+	right: 10px;
+	z-index: 1;
+	font-size: 35px;
+	font-weight: bold;
 }
