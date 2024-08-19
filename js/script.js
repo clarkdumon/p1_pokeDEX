@@ -113,6 +113,6 @@ async function fetchPokemon(pokemon) {
 	</div>
 	</div>`;
 	clickedPokemon[0].innerHTML = pokemonHTML;
-	console.log(clickedPokemon);
-	return pokemonData;
+	// console.log(clickedPokemon);
+	// return pokemonData;
 }

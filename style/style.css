@@ -50,7 +50,9 @@ body {
 
 .pokemonDetails {
 	height: 350px;
-	outline: solid orange;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.507);
+	/* outline: solid orange; */
 	position: relative;
 	/* overflow: hidden; */
 }
@@ -58,6 +60,7 @@ body {
 	position: absolute;
 	top: 20px;
 	left: 20px;
+	z-index: 1;
 }
 .pokemonImgType {
 	width: 500px;
