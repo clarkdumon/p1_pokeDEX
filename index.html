@@ -10,61 +10,36 @@
 		<div class="container">
 			<div class="col1 searchColumn">
 				<h1>POKEDEX</h1>
-				<input
-					type="text"
-					name="searchBox"
-					id="searchBox"
-					placeholder="Search Pokemon" />
+				<span>
+					<input
+						type="text"
+						name="searchBox"
+						id="searchBox"
+						placeholder="Search Pokemon"
+						autocomplete="off" />
+					<input type="button" value="X" id="clearBtn" />
+				</span>
 				<ul id="pokemonList">
-					<li><span>
-						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png" alt="" height="100px" width="100px">
-							<p>Bulbasaur</p>
-						</img>
-					</span></li>
-					<li><span>
-						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png" alt="" height="100px" width="100px">
-							<p>Bulbasaur</p>
-						</img>
-					</span></li>
-					<li><span>
-						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png" alt="" height="100px" width="100px">
-							<p>Bulbasaur</p>
-						</img>
-					</span></li>
-					<li><span>
-						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png" alt="" height="100px" width="100px">
-							<p>Bulbasaur</p>
-						</img>
-					</span></li>
-					<li><span>
-						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png" alt="" height="100px" width="100px">
-							<p>Bulbasaur</p>
-						</img>
-					</span></li>
-					<li><span>
-						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png" alt="" height="100px" width="100px">
-							<p>Bulbasaur</p>
-						</img>
-					</span></li>
-				</l>
+					none
+				</ul>
 			</div>
 			<div class="col2 pokemonColumn">
 				<div class="pokemonDetails">
-					<div class="pokemonNameID ">
+					<div class="pokemonNameID">
 						<h2>#0001</h2>
 						<h2>Bulbasaur</h2>
 					</div>
-					<div class="pokemonImgType ">
+					<div class="pokemonImgType">
 						<img
-						src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png"
-						alt="" />
+							src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png"
+							alt="" />
 					</div>
 					<div class="pokemonType">
-							<span>grass</span>
-							<span>poison</span>
+						<span>grass</span>
+						<span>poison</span>
 					</div>
 				</div>
-				<div class="pokemonStats grid4" style="display:none;">
+				<div class="pokemonStats grid4" style="display: none">
 					<ul>
 						<li>
 							<span class="statName">hp</span><span class="statValue">80</span>
@@ -94,4 +69,5 @@
 			</div>
 		</div>
 	</body>
+	<script src="js/script.js"></script>
 </html>
