@@ -1,3 +1,6 @@
+* {
+	margin: auto;
+}
 body {
 	display: flex;
 	justify-content: center;
@@ -18,9 +21,39 @@ body {
 	height: 500px;
 	width: 50%;
 }
+
 .col2 {
-	outline: solid red;
+	/* outline: solid red; */
 	height: 500px;
 	width: 50%;
+	display: none;
+}
+
+.pokemonDetails {
+	height: 350px;
+	outline: solid orange;
 	position: relative;
+	/* overflow: hidden; */
+}
+.pokemonNameID {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.pokemonImgType {
+	width: 500px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pokemonImgType img {
+	height: 350px;
+	object-fit: contain;
+}
+
+.pokemonType {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
 }
