@@ -1,5 +1,6 @@
 * {
 	margin: auto;
+	font-family: "Courier New", Courier, monospace;
 }
 body {
 	display: flex;
@@ -16,10 +17,26 @@ body {
 }
 
 .col1 {
-	outline: solid blue;
+	/* background: red;
+	outline: solid blue; */
 	overflow: hidden;
-	height: 500px;
-	width: 50%;
+}
+
+.col1 #searchBox {
+	width: 400px;
+	height: 40px;
+	margin: 10px 0;
+	font-weight: 200;
+	font-size: 30px;
+	text-align: center;
+}
+
+.col1 h1 {
+	text-align: center;
+}
+
+.col1 #pokemonList {
+	/* display: none; */
 }
 
 .col2 {
