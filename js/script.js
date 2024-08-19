@@ -2,6 +2,7 @@ console.clear;
 const pokeList = document.getElementById("pokemonList");
 const searchBar = document.getElementById("searchBox");
 const clearBtn = document.getElementById("clearBtn");
+const clickedPokemon = document.getElementsByClassName("pokemonColumn");
 
 clearBtn.addEventListener("click", () => {
 	searchBar.value = "";
@@ -80,7 +81,7 @@ async function fetchPokemon(pokemon) {
 		name: data.name,
 		sprite: data.sprites.other["official-artwork"].front_default,
 		type: data.types.map((type) => {
-			return type.type.name;
+			return `<span>${type.type.name}</span>`;
 		}),
 		height: data.height,
 		weight: data.weight,
@@ -93,6 +94,25 @@ async function fetchPokemon(pokemon) {
 		}),
 	};
 	// console.log(pokemonData);
-	console.log(pokemonData);
+
+	const pokemonHTML = `<div class="pokemonDetails">
+	<div class="pokemonNameID">
+	<h2>#${pokemonData.index}</h2>
+	<h2>${pokemonData.name}</h2>
+	</div>
+	<div class="pokemonImgType">
+	<img
+	src="${pokemonData.sprite}"
+	alt="" />
+	</div>
+	<div class="pokemonType">
+	${pokemonData.type.join(" ")}
+	</div>
+	<div class="closer">
+	<span>close</span>
+	</div>
+	</div>`;
+	clickedPokemon[0].innerHTML = pokemonHTML;
+	console.log(clickedPokemon);
 	return pokemonData;
 }
