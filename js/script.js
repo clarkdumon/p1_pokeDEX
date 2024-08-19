@@ -1,8 +1,15 @@
 console.clear;
 const pokeList = document.getElementById("pokemonList");
 const searchBar = document.getElementById("searchBox");
+const clearBtn = document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click", () => {
+	searchBar.value = "";
+	fetchPokemonList("");
+});
 
 searchBar.addEventListener("keyup", fetchPokemonList);
+searchBar.addEventListener("focus", fetchPokemonList);
 
 async function fetchData(url, funcName) {
 	//

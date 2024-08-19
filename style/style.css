@@ -76,17 +76,24 @@ body {
 	bottom: 30px;
 	right: 30px;
 }
+ul {
+	height: 400px;
+	overflow: auto;
+}
 
+ul::after {
+	display: none;
+}
 ul li {
 	list-style: none;
-	border-bottom: 1px solid black;
 }
 ul .pokemon {
 	padding: 5px;
-	width: 50px;
 	/* background: red; */
+	width: 200px;
 	margin: 5px;
-	text-align: center;
+	text-align: left;
+	font-size: 30px;
 }
 #clearBtn {
 	/* outline: solid red; */
