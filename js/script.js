@@ -79,9 +79,10 @@ async function fetchPokemon(pokemon) {
 	const pokemonData = {
 		index: data.id,
 		name: data.name,
+		proper: data.name[0].toUpperCase() + data.name.slice(1),
 		sprite: data.sprites.other["official-artwork"].front_default,
 		type: data.types.map((type) => {
-			return `<span>${type.type.name}</span>`;
+			return `<span class="background-color-${type.type.name}">${type.type.name}</span>`;
 		}),
 		height: data.height,
 		weight: data.weight,
@@ -93,12 +94,13 @@ async function fetchPokemon(pokemon) {
 			return status;
 		}),
 	};
-	// console.log(pokemonData);
+
+	console.log(pokemonData);
 
 	const pokemonHTML = `<div class="pokemonDetails">
 	<div class="pokemonNameID">
 	<h2>#${pokemonData.index}</h2>
-	<h2>${pokemonData.name}</h2>
+	<h2>${pokemonData.proper}</h2>
 	</div>
 	<div class="pokemonImgType">
 	<img
@@ -113,6 +115,8 @@ async function fetchPokemon(pokemon) {
 	</div>
 	</div>`;
 	clickedPokemon[0].innerHTML = pokemonHTML;
+	clickedPokemon[0].style.removeProperty("display");
+	// searchBar.value = "";
 	// console.log(clickedPokemon);
 	// return pokemonData;
 }

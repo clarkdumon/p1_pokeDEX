@@ -37,15 +37,10 @@ body {
 	text-align: center;
 }
 
-.col1 #pokemonList {
-	/* display: none; */
-}
-
 .col2 {
 	/* outline: solid red; */
 	height: 500px;
 	width: 50%;
-	/* display: none; */
 }
 
 .pokemonDetails {
@@ -76,8 +71,8 @@ body {
 
 .pokemonType {
 	position: absolute;
-	bottom: 30px;
-	right: 30px;
+	bottom: 20px;
+	right: 15px;
 }
 
 .closer {
@@ -116,5 +111,15 @@ ul .pokemon {
 	right: 10px;
 	z-index: 1;
 	font-size: 35px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.pokemonType span {
+	border-radius: 3px;
+	/* color: white; */
+	/* outline: solid red 1px; */
+	padding: 5px 10px 5px 10px;
+	text-transform: capitalize;
 	font-weight: bold;
 }
