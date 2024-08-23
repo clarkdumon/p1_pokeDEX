@@ -12,6 +12,8 @@ clearBtn.addEventListener("click", () => {
 searchBar.addEventListener("keyup", fetchPokemonList);
 searchBar.addEventListener("focus", fetchPokemonList);
 
+
+
 async function fetchData(url, funcName) {
 	//
 	try {
@@ -37,7 +39,7 @@ async function fetchData(url, funcName) {
 }
 
 async function fetchPokemonList() {
-	const url = "https://pokeapi.co/api/v2/pokemon?limit=15000";
+	const url = "https://pokeapi.co/api/v2/pokemon?limit=10000";
 	let searchValue = searchBar.value;
 	let data = await fetchData(url, "fetchPokemonList");
 	let pokemons = data.results.map((res) => {
