@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<link rel="stylesheet" href="style/pokemonDetails.css" />
+	<link rel="stylesheet" href="/style/style.css" />
+	<body>
+		<div class="container">
+			<div class="col1 searchColumn">
+				<h1>POKEDEX</h1>
+				<span>
+					<input
+						type="text"
+						name="searchBox"
+						id="searchBox"
+						placeholder="Search Pokemon"
+						autocomplete="off" />
+					<input type="button" value="x" id="clearBtn" />
+				</span>
+				<ul id="pokemonList"></ul>
+			</div>
+			<div class="col2 pokemonColumn" style="display: none">
+				<div class="pokemonDetails">
+					<div class="pokemonNameID">
+						<h2>#0001</h2>
+						<h2>Bulbasaur</h2>
+					</div>
+					<div class="pokemonImgType">
+						<img
+							src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png"
+							alt="" />
+					</div>
+					<div class="pokemonType">
+						<span>grass</span>
+						<span>poison</span>
+					</div>
+					<div class="closer">
+						<span>close</span>
+					</div>
+				</div>
+				<div class="pokemonStats grid4" style="display: none">
+					<ul>
+						<li>
+							<span class="statName">hp</span><span class="statValue">80</span>
+						</li>
+						<li>
+							<span class="statName">attack</span
+							><span class="statValue">82</span>
+						</li>
+						<li>
+							<span class="statName">defense</span
+							><span class="statValue">83</span>
+						</li>
+						<li>
+							<span class="statName">speed</span
+							><span class="statValue">80</span>
+						</li>
+						<li>
+							<span class="statName">special-attack</span
+							><span class="statValue">100</span>
+						</li>
+						<li>
+							<span class="statName">special-defense</span
+							><span class="statValue">100</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/script.js"></script>
+</html>
