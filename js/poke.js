@@ -58,14 +58,7 @@ async function getPokemonData(event) {
 }
 
 
-const test ={
-  "name": "bulbasaur",
-  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  "type": [
-      "grass",
-      "poison"
-  ]
-}
+
 console.log(pokemonData(test));
 function pokemonData(pokemon) {
   //Created the Div on the pokemon container
