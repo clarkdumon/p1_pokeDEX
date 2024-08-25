@@ -1,69 +1,74 @@
 /* Pokedex -- https://dribbble.com/shots/6540871-Pokedex-App/attachments/6540871-Pokedex-App?mode=media */
 
-:root{
-    --color-primary:#5B2A86;
-    --color-secondary:#A5E6BA;
-    --color-grey:#9AC6C5;
-    --color-text:#FAF9F6;
-    --color-label:#e2e1e9;
-    --color-label-dark: #0f0e0e;
+:root {
+  --color-primary: #5b2a86;
+  --color-secondary: #a5e6ba;
+  --color-grey: #9ac6c5;
+  --color-text: #faf9f6;
+  --color-label: #e2e1e9;
+  --color-label-dark: #0f0e0e;
+
+  /*? Box Shadow */
+  --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  --box-shadow-hover: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
+    0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-*{
-    margin: 0;
-    padding:0;
-    list-style-type: none;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-    background: var(--color-grey);
-    
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-grey);
 }
 
-.pokedex--header-controls{
-    outline: solid red 1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items:center ;
-    margin-top: 20px;
-    padding:0 1.5rem 0 1.5rem;
-}
-
-.pokedex-container{
-    margin: ;
-    outline: solid blue 1px;
+.pokedex-container {
+    /* outline: solid blue 1px; */
     border-radius: 10px;
     height: 800px;
     width: 500px;
-    background:var(--color-label);
+    background: var(--color-label);
+    box-shadow: var(--box-shadow-hover);
+  }
+
+.pokedex--header-controls {
+  outline: solid red 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
-#inp-searchbox{
-position: relative;
-right: 0;
-width: 80%;
-height: 30px;
+
+#inp-searchbox {
+  width: 100%;
+  height: 40px;
+  cursor: text;
 }
-.pokemon--header{
-    outline: solid red 1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center ;
-    margin-top: 20px;
-    padding:0 1.5rem 0 1.5rem;
+.pokemon--header {
+  outline: solid red 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 /* span.invisible-matter{
     display: none;
 } */
 
-/* div.invisible-matter>input{
+input.invisible-matter{
     display: none;
-} */
+}
