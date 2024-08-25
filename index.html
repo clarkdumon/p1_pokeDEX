@@ -1,47 +1,48 @@
 <!-- Pokedex -- https://dribbble.com/shots/6540871-Pokedex-App/attachments/6540871-Pokedex-App?mode=media -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
+    />
+    <link rel="stylesheet" href="style/pokemonDetails.css">
+  </head>
+  <body>
     <div class="pokedex-container">
-        <header class="pokedex--header">
-            <div class="pokedex--header-controls">
-                <span class="material-symbols-outlined backbutton invisible-matter">arrow_back</span>
-                <span class="material-symbols-outlined">grid_on</span>
-            </div>
-            <div class="pokedex--main-header">
-                <div class="pokemon--header">
-                    <h1>Pokedex</h1>
-                    <span class="material-symbols-outlined" id="searchButton">search</span>
-                </div>
-                <div class="pokemon--searchbar" id="search-div">
-                    <input class="invisible-matter" type="text" placeholder="Search Pokemon" id="inp-searchbox">
-                </div>
-            </div>
-        </header>
-        <main class="pokedex--main">
-            <div class="pokemon--main-body">
-                <ul>
-                    <li>Bulbasaur</li>
-                    <li>Bulbasaur</li>
-                    <li>Bulbasaur</li>
-                    <li>Bulbasaur</li>
-                    <li>Bulbasaur</li>
-                    <li>Bulbasaur</li>
-                </ul>
-            </div>
-            
-        </main>
+      <header class="pokedex--header">
+        <div class="pokedex--header-controls">
+          <span class="material-symbols-outlined backbutton invisible-matter"
+            >arrow_back</span
+          >
+          <span class="material-symbols-outlined">grid_on</span>
+        </div>
+        <div class="pokedex--main-header">
+          <div class="pokemon--header">
+            <h1>Pokedex</h1>
+            <span class="material-symbols-outlined" id="searchButton"
+              >search</span
+            >
+          </div>
+          <div class="pokemon--searchbar" id="search-div">
+            <input
+              class="invisible-matter"
+              type="text"
+              placeholder="Search Pokemon"
+              id="inp-searchbox"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="pokedex--main">
+        <div class="pokemon--main-body" id="pokemon--main-body">
+        </div>
+      </main>
     </div>
-    
-
-
-</body>
-<script src="js/poke.js"></script>
+  </body>
+  <script src="js/poke.js"></script>
 </html>

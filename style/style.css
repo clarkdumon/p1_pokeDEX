@@ -28,6 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--color-grey);
+  overflow: hidden;
 }
 
 .pokedex-container {
@@ -40,7 +41,7 @@ body {
   }
 
 .pokedex--header-controls {
-  outline: solid red 1px;
+  /* outline: solid red 1px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -51,12 +52,14 @@ body {
 
 
 #inp-searchbox {
-  width: 100%;
+  align-self: center;
+  justify-self: center;
+  width: 80%;
   height: 40px;
   cursor: text;
 }
 .pokemon--header {
-  outline: solid red 1px;
+  /* outline: solid red 1px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -71,4 +74,82 @@ body {
 
 input.invisible-matter{
     display: none;
+}
+
+.pokedex--main{
+
+  /* outline: solid orange 1px; */
+  height: 100%;
+}
+
+.pokemon--main-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 80%;
+  overflow-y: scroll;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.pokemon--container{
+  border-radius: 3px;
+  position: relative;
+  padding:10px;
+  margin: 10px;
+  /* outline:solid red 1px; */
+  width: 200px;
+  height: 100px;
+  background: var(--color-text);
+  box-shadow: var(--box-shadow-hover);
+
+}
+
+.pokemon--container h4,p{
+  z-index: -1;
+  text-transform: capitalize;
+}
+
+.pokemon--container p{
+  margin: 5px;
+  padding:5px;
+  border-radius: 5px;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+
+
+.pokemon--container img{
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  /* background: black; */
+  object-fit: scale-down;
+  height: 100px;
+  z-index: 100;
+  
+  
+}
+
+.pokemon--container:hover img{
+  animation-play-state: running;
+  animation: zoom-ani 1s ease-in-out infinite; /* Continuous zoom animation */
+  transition: transform 0.3s ease;
+  
+}
+
+@keyframes zoom-ani {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
 }
