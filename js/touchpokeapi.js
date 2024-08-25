@@ -16,7 +16,6 @@ async function fetcher(url,whatfunction) {
 }
 
 
-
-async function getPokemonData(params){
+async function getPokemonData(url){
 
 }
