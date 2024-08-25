@@ -108,8 +108,9 @@ input.invisible-matter{
 }
 
 .pokemon--container h4,p{
-  z-index: -1;
+  z-index: 1;
   text-transform: capitalize;
+  position: relative;
 }
 
 .pokemon--container p{
@@ -129,7 +130,7 @@ input.invisible-matter{
   /* background: black; */
   object-fit: scale-down;
   height: 100px;
-  z-index: 100;
+  order: 0;
   
   
 }
